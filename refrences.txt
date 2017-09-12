@@ -1,0 +1,6 @@
+Refrences for spark
+---------------
+
+http://apachesparkbook.blogspot.in
+http://spark.apache.org/docs/latest/rdd-programming-guide.html
+ibooksonline.com/ (log in with your IBM id)
