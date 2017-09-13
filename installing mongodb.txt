@@ -1,7 +1,12 @@
 wmic os get caption
 wmic os get osarchitecture
 
+To start mongoshell
+first step:=Open cmd->go to mongo bin folder->mongod
+-----------
 
+second step:=Open cmd->go to mongo bin folder->mongo
+-----------
 createing or selecting db in mongodb
 
 use dbname
