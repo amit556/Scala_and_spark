@@ -1,3 +1,11 @@
+Downoad git release for windows from https://git-scm.com.
+
+setting git user name
+-------------------------
+
+git -config global user.name " " (github registered username)
+git -config global user.email " " (github registered emai)
+
 cloning repository
 --------------------
 git clone http://github.com/username/reponame.git (will clone at pwd)
@@ -34,16 +42,19 @@ git commit file1 file2
 git commit -a
 
 
+switch to master branch
+---------------------------
+
+git checkout master
+
+merge to newly created branch
+------------------------------
+git merge branchname
+
 To see unpushed commited change
 -------------------------------
 
 git log --branches --not --remotes
-
-setting git user name
--------------------------
-
-git -config global user.name " " (github registered username)
-git -config global user.email " " (github registered emai)
 
 push changes to remotes
 -------------------------------
