@@ -7,3 +7,15 @@ safaribooksonline.com/ (log in with your IBM id)
 https://www.analyticsvidhya.com/blog/2017/01/scala/
 https://github.com/lauris/awesome-scala#science-and-data-analysis
 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html
+
+for currying functions
+------------------------------
+https://dzone.com/articles/currying-functions-in-scala  (explained in better way)
+https://stackoverflow.com/questions/8063325/usefulness-as-in-practical-applications-of-currying-v-s-partial-application-i
+http://www.codecommit.com/blog/scala/function-currying-in-scala
+
+for partial functions
+-------------------------
+
+https://alvinalexander.com/scala/how-to-define-use-partial-functions-in-scala-syntax-examples
+http://blog.bruchez.name/2011/10/scala-partial-functions-without-phd.html
