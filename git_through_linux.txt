@@ -3,8 +3,8 @@ Downoad git release for windows from https://git-scm.com.
 setting git user name
 -------------------------
 
-git -config global user.name " " (github registered username)
-git -config global user.email " " (github registered emai)
+git config --global user.name " " (github registered username)
+git config --global user.email " " (github registered emai)
 
 cloning repository
 --------------------
