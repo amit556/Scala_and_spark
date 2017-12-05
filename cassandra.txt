@@ -1,0 +1,132 @@
+Cassandra tutorial
+
+To create new keyspace:
+-------------------------
+
+CREATE KEYSPACE IF NOT EXISTS keyspace_name WITH REPLICATION = {'class':'Strategy Name', 'replication_factor':No of replicas}
+
+To work with your created workspace:
+
+USE keyspace_name;
+
+Create objects in your workspace.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+MAVEN dependencies for cassandra;
+
+<project xmlns = "http://maven.apache.org/POM/4.0.0" 
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"  
+   xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <build>
+      <sourceDirectory>src</sourceDirectory>
+      <plugins>
+         <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+				
+               <configuration>
+                  <source>1.7</source>
+                  <target>1.7</target>
+               </configuration>
+					
+         </plugin>
+      </plugins>
+   </build> 
+
+   <dependencies>
+      <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+         <version>1.7.5</version>
+      </dependency>
+ 
+      <dependency>
+         <groupId>com.datastax.cassandra</groupId>
+         <artifactId>cassandra-driver-core</artifactId>
+         <version>2.0.2</version>
+      </dependency>
+ 
+      <dependency>
+         <groupId>com.google.guava</groupId>
+         <artifactId>guava</artifactId>
+         <version>16.0.1</version>
+      </dependency>
+ 
+      <dependency>
+         <groupId>com.codahale.metrics</groupId>
+         <artifactId>metrics-core</artifactId>
+         <version>3.0.2</version>
+      </dependency>
+ 
+      <dependency>
+         <groupId>io.netty</groupId>
+         <artifactId>netty</artifactId>
+         <version>3.9.0.Final</version>
+      </dependency>
+   </dependencies>
+
+</project>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CAPTURE: this command is used to store result of a query in file.
+Syntax:  CAPTURE filename.
+
+COPY : This command copy data to and from cassandra to a file.
+
+COPY columnfamily name(column names) TO filename.
+
+Source: To execute commands in a file
+
+Source filename
+
+Batch:  Usin this command we can execute multiple modification statement simultinaeously followed by semicolon(;).
+
+Begin Batch
+Insert Statement1 / Update Statement1/ Delete Statement1;
+Insert Statement2 / Update Statement2/ Delete Statement2;
+Insert Statement3 / Update Statement3/ Delete Statement3;
+Apply Batch\
+
+Creating a Table with List
+
+CREATE TABLE data(name text PRIMARY KEY, email list<text>);
+
+The list data ar enclosed in square braces seperated by commas.
+
+Updating a List
+
+UPDATE data
+... SET email = email +['xyz@tutorialspoint.com']
+... where name = 'ramu';
+
+Creating a Table with SET
+
+CREATE TABLE data2 (name text PRIMARY KEY, phone set<varint>)
+
+Updating a SET
+
+ UPDATE data2
+   ... SET phone = phone + {9848022330}
+   ... where name = 'rahman';
+
+Map is a data type that is used to store a key-value pair of elements.
+
+Creating a Table with Map
+
+ CREATE TABLE data3 (name text PRIMARY KEY, address
+map<timestamp, text>);
+
+Inserting Data into a Map
+
+INSERT INTO data3 (name, address)
+   VALUES ('robin', {'home' : 'hyderabad' , 'office' : 'Delhi' } );
+   
+   Updating a MAP
+   
+   UPDATE data3
+   ... SET address = address+{'office':'mumbai'}
+   ... WHERE name = 'robin';
+   
+   
