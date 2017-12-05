@@ -1,0 +1,6 @@
+currying function=   This allow us to use multi arguements function as function with single arguemnts which is itself a function upto arity of 5.(considered as good) 
+--------------------
+
+partial function  will exexutes for some set of input hence all partial function basically contains isdefinedat clause with it.
+
+anonymous function
