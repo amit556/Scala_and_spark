@@ -30,8 +30,19 @@ branch
 
 *  denotes your current branch
 
+
+Adding new files to ur branch
+
+git add filename
+
+
 checking status of currenct branch
-------------------------------------
+
+
+to see all the committed changes at once
+
+git log --oneline
+
 
 git status
 

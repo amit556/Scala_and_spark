@@ -1,5 +1,5 @@
 Importing data to hadoop using sqoop from mysql
--======================================================
+===============================================
 
 Granting remote access to system
 ------------------------------------
@@ -7,8 +7,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@ipaddress IDENTIFIED BY 'some_characters'Â
 
 command to import data from mariadb to hadoop using scoop
 ---------------------------------------------------------
-
-sqoop import --connect jdbc:mysql://host:port/databasename --username root --password password --m 1 --table tablename --target -dir path 
+sqoop import --connect jdbc:mysql://host:port/databasename --username root --password password --m 1 --table tablename --target -dir path
 
 command to find host
 -------------------
@@ -20,7 +19,6 @@ on mariadb/mysql prompt
 -----------------------
 show variables like 'port'
 
-
 to run a jar in hadoop using spark submit
 =========================================
 
@@ -29,7 +27,3 @@ spark-submit --class SparkPii --master yarn-cluster --deploy-mode cluster jarnam
 to save logs
 ------------
 yarn logs -applicationId applicationId/applicationId.logs
-
- 
-
-
