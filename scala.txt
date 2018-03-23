@@ -1,1 +1,0 @@
-list are collection of data having same datatypes but list are immutable and they are stored in contigous location
